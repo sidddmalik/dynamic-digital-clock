@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<!-- Coding by CodingLab | www.codinglabweb.com-->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
     <title> Dynamic Digital Clock | CodingLab </title>
     <link rel="stylesheet" href="style.css">
-    <!-- Fontawesome CDN Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
    </head>
 <body>
@@ -49,8 +47,6 @@
   icons.onclick = ()=>{
     section.classList.toggle("dark");
   }
-
-  // creating a function and calling it in every seconds
   setInterval(()=>{
 
     let date = new Date(),
@@ -59,11 +55,10 @@
     sec = date.getSeconds();
 
     let d;
-    d = hour < 12 ? "AM" : "PM"; //if hour is smaller than 12, than its value will be AM else its value will be pm
-    hour = hour > 12 ? hour - 12 : hour; //if hour value is greater than 12 than 12 will subtracted ( by doing this we will get value till 12 not 13,14 or 24 )
-    hour = hour == 0 ? hour = 12 : hour; // if hour value is  0 than it value will be 12
+    d = hour < 12 ? "AM" : "PM"; 
+    hour = hour > 12 ? hour - 12 : hour; 
+    hour = hour == 0 ? hour = 12 : hour; 
 
-    // adding 0 to the front of all the value if they will less than 10
     hour = hour < 10 ? "0" + hour : hour;
     min = min < 10 ? "0" + min : min;
     sec = sec < 10 ? "0" + sec : sec;
@@ -73,7 +68,7 @@
     document.querySelector(".sec_num").innerText = sec;
     document.querySelector(".am_pm").innerText = d;
 
-  }, 1000); // 1000 milliseconds = 1s
+  }, 1000); 
 
   </script>
 
